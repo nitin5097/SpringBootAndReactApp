@@ -1,0 +1,38 @@
+Steps to start both Backend (Springboot) and Front Applications (React).
+
+1: Prerquisite: 
+	1.1: Node js/npm to start the frontend application.
+	1.2: Eclipse IDE to run the backend application.
+	1.3: JDK 1.8.
+2: download Project from this link: https://github.com/nitin5097/SpringBootAndReactApp.git
+
+3: In the eclipe IDE, import existing maven project from the SpringBootAndReactApp folder.
+
+4: Right click on the project root folder: "SpringBootAndReactApp", then click on "Run As" -> "Maven build".
+   Type "clean install" in the goal and click "run".
+
+5: Once the build is successful on the console, open AssignmentApplication.java from location-                         		                 "SpringBootAndReactApp/src/main/java/com/assignment/developer/backend/AssignmentApplication.java". 
+   Right click on the Java page and click "Run As" and click "Java application". The backend will be up in a minute with some Json data on the console.
+  
+6: After the backend is up, now we need to run the front end application (React). For this go the root folder "SpringBootAndReactApp", 
+   then click on "app" folder.
+
+7: In the app folder open cmd (command prompt) and run below commands:
+
+	7.1: npm install
+	7.2: npm start
+ 
+8: You will be redirected to browser with running Application.
+
+Note: If your backend is showing error as 8080 port is already used, follow these steps:
+  Step 1: Open the application.properties from "SpringBootAndReactApp/src/main/resources/application.properties" location.
+  Step 2: Write explicitely "sever.port = 8081/8082" and save the file.
+  Step 3: Run the backend application following Step 5 Above.
+  
+  And with respect to this change of port number, follow these steps to accomodate the change in Frontend Application as well:
+  
+  Step 1: Open "package.json" in "app" folder in a notepad.
+  Step 2: Update the port number in the below mentioned line:
+           "proxy": "http://localhost:8080", 
+  Step 3: Save the file and run the "npm start" command in the command prompt.
+  Step 4: Your Application will be up.  
