@@ -42,7 +42,7 @@ class GroupEdit extends Component {
     event.preventDefault();
     const {item} = this.state;
 
-    await fetch('/api/group', {
+    await fetch('/api/group/${id}', {
       method: (item.id) ? 'PUT' : 'POST',
       headers: {
         'Accept': 'application/json',
